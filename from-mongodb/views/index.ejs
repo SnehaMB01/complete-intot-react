@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+  <title>Intot</title>
+ 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+.maindiv{
+  background-color: #c4d70f;
+  height: 620px;
+  clip-path:polygon(0 0,100% 0,100% 75%,0 100%);
+}
+.tablediv
+{
+  padding-left: 33%;
+  padding-top: 7%;
+}
+h1{
+  text-align: center;
+  padding-top: 10%;
+}
+</style>
+</head>
+  <body>
+    <div class="maindiv"><h1>Dash Board!</h1>
+    <div class="tablediv"><table class="table  table-striped" style="width: 50%">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">NAME</th>
+            <th scope="col">EMAIL</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% notesList.forEach(note=>{ %>
+          <tr>
+            <th scope="row"><%=note._id %></th>
+            <td><%=note.fname%></td>
+            <td><%=note.email %></td>
+          </tr>
+          <%})%>
+        </tbody>
+      </table>
+    </div>
+     </div>
+  </body>
+</html>
